@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130419155122) do
+ActiveRecord::Schema.define(:version => 20130424150303) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer "adress_id"
+    t.integer "city_id"
+    t.string  "address 1"
+    t.string  "address 2"
+  end
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",      :limit => 25
@@ -26,6 +33,51 @@ ActiveRecord::Schema.define(:version => 20130419155122) do
 
   add_index "admin_users", ["username"], :name => "index_admin_users_on_username"
 
+  create_table "categories", :force => true do |t|
+    t.integer "category_id"
+    t.string  "name",        :limit => 50
+    t.text    "description"
+  end
+
+  create_table "cities", :force => true do |t|
+    t.integer "city_id"
+    t.integer "country_id"
+    t.string  "name"
+    t.integer "zip_code"
+  end
+
+  create_table "components", :force => true do |t|
+    t.integer "category_id"
+    t.string  "name",        :limit => 30
+    t.text    "description"
+    t.text    "picture"
+    t.float   "price"
+  end
+
+  create_table "countries", :force => true do |t|
+    t.integer "country_id"
+  end
+
+  create_table "menu_links", :force => true do |t|
+    t.integer "menu_id"
+    t.string  "title",   :limit => 50
+    t.text    "path"
+  end
+
+  create_table "menus", :force => true do |t|
+    t.string   "name",        :limit => 25
+    t.string   "description", :limit => 50
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  create_table "orders", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "component_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "pages", :force => true do |t|
     t.integer  "subject_id"
     t.string   "name"
@@ -37,6 +89,16 @@ ActiveRecord::Schema.define(:version => 20130419155122) do
 
   add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
   add_index "pages", ["subject_id"], :name => "index_pages_on_subject_id"
+
+  create_table "pictures", :force => true do |t|
+    t.integer "slideshow_id"
+    t.string  "title",        :limit => 50
+    t.text    "description"
+  end
+
+  create_table "polices", :force => true do |t|
+    t.string "name", :limit => 25
+  end
 
   create_table "sections", :force => true do |t|
     t.integer  "page_id"
@@ -50,6 +112,12 @@ ActiveRecord::Schema.define(:version => 20130419155122) do
   end
 
   add_index "sections", ["page_id"], :name => "index_sections_on_page_id"
+
+  create_table "slideshows", :force => true do |t|
+    t.string "name",    :limit => 50
+    t.text   "url"
+    t.text   "picture"
+  end
 
   create_table "subjects", :force => true do |t|
     t.string   "name"
