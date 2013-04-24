@@ -1,0 +1,28 @@
+<h1>Basic#index</h1>
+<p>Find me in app/views/basic/index.html.erb</p>
+
+<%= 1 + 1 %>
+
+<p> Hello World </p>
+<p>
+<% target = "World" %>
+<%= "Hello #{target}" %>   
+</p>
+
+<% 
+3.times do
+	puts "xxx"
+end
+%>
+
+<% 3.times do %>
+Result : <%= "xxx" %>
+<% end %>
+
+<p>
+<% @array.each do |n| %>
+	<%= n %><br />
+<% end %>
+</p>
+
+<%= link_to("Accueil", {:action =>'index'}) %>

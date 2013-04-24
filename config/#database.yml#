@@ -1,0 +1,17 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  username: maxclifordjean
+  password:
+
+development:
+  <<: *common
+  database: mep_config
+
+test: &test
+  <<: *common
+  database: mep_config
+
+production:
+  <<: *common
+  database: mep_config
