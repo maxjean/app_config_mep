@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424150303) do
+ActiveRecord::Schema.define(:version => 20130426154021) do
 
   create_table "addresses", :force => true do |t|
     t.integer "adress_id"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20130424150303) do
 
   create_table "countries", :force => true do |t|
     t.integer "country_id"
+    t.string  "name",       :limit => 50
   end
 
   create_table "menu_links", :force => true do |t|
@@ -85,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20130424150303) do
     t.boolean  "visible",    :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.integer  "position"
   end
 
   add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
@@ -121,7 +123,7 @@ ActiveRecord::Schema.define(:version => 20130424150303) do
 
   create_table "subjects", :force => true do |t|
     t.string   "name"
-    t.integer  "postion"
+    t.integer  "position"
     t.boolean  "visible",    :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
