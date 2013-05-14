@@ -1,5 +1,12 @@
 ConfigMep::Application.routes.draw do
   get "basic/index"
+  get "basic/event"
+  get "basic/content"
+  get "basic/branding"
+  get "basic/layout"
+  get "basic/logistics"
+  get "basic/app"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

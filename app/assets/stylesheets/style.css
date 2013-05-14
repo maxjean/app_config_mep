@@ -1,21 +1,210 @@
-/*
-Errno::ENOENT: No such file or directory - sass/style.scss
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("polices/opensans-regular-webfont.eot");
+  src: url("polices/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("polices/opensans-regular-webfont.woff") format("woff"), url("polices/opensans-regular-webfont.ttf") format("truetype"), url("polices/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-Backtrace:
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:339:in `read'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:299:in `block in watch'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - sass/style.scss"; }
+body {
+  background-image: url("Background-2.jpg");
+  font-family: open_sansregular, serif;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 0 0;
+  padding: 0 0;
+  width: 100%; }
+
+h3 {
+  text-transform: uppercase; }
+
+.img_header {
+  background-image: url("header/Layer-7.png");
+  margin: 0 0 0 0; }
+
+#logo_magency {
+  padding-left: 60px;
+  padding-right: 50px; }
+
+#title {
+  padding-left: 20px; }
+
+#magency_prod {
+  margin-top: 17px;
+  text-transform: capitalize;
+  font-size: 0.8em;
+  width: 200px;
+  padding-left: 80px; }
+
+#text_config h4 {
+  text-shadow: 4px 2px 20px white; }
+
+#row1 {
+  background-image: url("header/header_bar.png");
+  box-shadow: 5px 5px 10px #A27BAA;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #BA99C6;
+  margin: 0 0;
+  padding: 0 0;
+  width: 100%; }
+
+#navbar {
+  float: left;
+  display: inline-block;
+  margin: 0 0;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px #A27BAA;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #BA99C6; }
+
+.slide {
+  background-image: url("nav/slide.jpg");
+  float: left;
+  display: inline-block;
+  width: 5px;
+  height: 390px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px #A27BAA;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #712D6F; }
+
+#nav_home, #nav_event, #nav_content, #nav_logistics, #nav_app {
+  background-image: url("steps/back.jpg");
+  height: 58px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-indent: 10px; }
+
+nav a:hover {
+  color: #760001;
+  border-bottom: 3px solid #760001; }
+
+#navigation {
+  background-position: 0px 0px;
+  margin-left: 20px; }
+
+#nav_icon1 {
+  background-image: url("nav/round_1.png");
+  background-repeat: no-repeat;
+  float: left;
+  height: 30px;
+  width: 30px;
+  display: inline;
+  margin-top: 15px; }
+
+#nav_icon2 {
+  background-image: url("nav/round_2.png");
+  background-repeat: no-repeat;
+  float: left;
+  height: 30px;
+  width: 30px;
+  display: inline;
+  margin-top: 15px; }
+
+#nav_icon3 {
+  background-image: url("nav/round_3.png");
+  background-repeat: no-repeat;
+  float: left;
+  height: 30px;
+  width: 30px;
+  display: inline;
+  margin-top: 15px; }
+
+#nav_icon4 {
+  background-image: url("nav/round_4.png");
+  background-repeat: no-repeat;
+  float: left;
+  height: 30px;
+  width: 30px;
+  display: inline;
+  margin-top: 15px; }
+
+#nav_icon5 {
+  background-image: url("nav/round_5.png");
+  background-repeat: no-repeat;
+  float: left;
+  height: 30px;
+  width: 30px;
+  display: inline;
+  margin-top: 15px; }
+
+#nav_button1, #nav_button2, #nav_button3, #nav_button4, #nav_button5 {
+  margin-right: 10px;
+  line-height: 60px;
+  width: 38px; }
+
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+li {
+  margin-left: 5px; }
+
+ol li a {
+  display: block;
+  width: 100px;
+  text-decoration: none;
+  color: gray; }
+
+ol li a:visited {
+  color: gray; }
+
+ol li a:hover {
+  color: #752F6D; }
+
+#main {
+  background-image: url("steps/back.jpg");
+  width: 1120px;
+  height: 390px;
+  margin-right: 20px;
+  margin-left: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px #A27BAA;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #BA99C6;
+  float: left; }
+
+#footer {
+  background-image: url("steps/down_3.png");
+  float: left;
+  color: white;
+  padding-left: 10px;
+  padding-right: 1px;
+  left: 220px;
+  width: 1168px;
+  box-shadow: 5px 5px 10px #A27BAA;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #BA99C6; }
+
+.footer_text {
+  width: 1083px;
+  margin-right: 0px;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 0.9em; }
+
+#footer2 {
+  margin-bottom: 100px; }
+
+.photo_footer {
+  background-image: url("steps/picture_5.png");
+  height: 66px;
+  width: 66px;
+  float: left;
+  line-height: 100px; }
+
+#ipad1 {
+  position: absolute;
+  margin-top: 14px;
+  left: 580px;
+  z-index: 200; }

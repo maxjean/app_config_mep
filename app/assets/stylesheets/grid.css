@@ -1,21 +1,196 @@
-/*
-Errno::ENOENT: No such file or directory - grid/grid_12.scss
+body {
+  max-width: 1440px; }
 
-Backtrace:
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:339:in `read'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:299:in `block in watch'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
-/Users/maxclifordjean/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - grid/grid_12.scss"; }
+.grid, .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.relative, .push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11, .push_12, .pull_12 {
+  position: relative; }
+
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px; }
+
+.container_12 .grid_1 {
+  width: 100px; }
+
+.prefix_1 {
+  padding-left: 120px; }
+
+.suffix_1 {
+  padding-right: 120px; }
+
+.push_1 {
+  left: 120px; }
+
+.pull_1 {
+  left: -120px; }
+
+.container_12 .grid_2 {
+  width: 220px; }
+
+.prefix_2 {
+  padding-left: 240px; }
+
+.suffix_2 {
+  padding-right: 240px; }
+
+.push_2 {
+  left: 240px; }
+
+.pull_2 {
+  left: -240px; }
+
+.container_12 .grid_3 {
+  width: 340px; }
+
+.prefix_3 {
+  padding-left: 360px; }
+
+.suffix_3 {
+  padding-right: 360px; }
+
+.push_3 {
+  left: 360px; }
+
+.pull_3 {
+  left: -360px; }
+
+.container_12 .grid_4 {
+  width: 460px; }
+
+.prefix_4 {
+  padding-left: 480px; }
+
+.suffix_4 {
+  padding-right: 480px; }
+
+.push_4 {
+  left: 480px; }
+
+.pull_4 {
+  left: -480px; }
+
+.container_12 .grid_5 {
+  width: 580px; }
+
+.prefix_5 {
+  padding-left: 600px; }
+
+.suffix_5 {
+  padding-right: 600px; }
+
+.push_5 {
+  left: 600px; }
+
+.pull_5 {
+  left: -600px; }
+
+.container_12 .grid_6 {
+  width: 700px; }
+
+.prefix_6 {
+  padding-left: 720px; }
+
+.suffix_6 {
+  padding-right: 720px; }
+
+.push_6 {
+  left: 720px; }
+
+.pull_6 {
+  left: -720px; }
+
+.container_12 .grid_7 {
+  width: 820px; }
+
+.prefix_7 {
+  padding-left: 840px; }
+
+.suffix_7 {
+  padding-right: 840px; }
+
+.push_7 {
+  left: 840px; }
+
+.pull_7 {
+  left: -840px; }
+
+.container_12 .grid_8 {
+  width: 940px; }
+
+.prefix_8 {
+  padding-left: 960px; }
+
+.suffix_8 {
+  padding-right: 960px; }
+
+.push_8 {
+  left: 960px; }
+
+.pull_8 {
+  left: -960px; }
+
+.container_12 .grid_9 {
+  width: 1060px; }
+
+.prefix_9 {
+  padding-left: 1080px; }
+
+.suffix_9 {
+  padding-right: 1080px; }
+
+.push_9 {
+  left: 1080px; }
+
+.pull_9 {
+  left: -1080px; }
+
+.container_12 .grid_10 {
+  width: 1180px; }
+
+.prefix_10 {
+  padding-left: 1200px; }
+
+.suffix_10 {
+  padding-right: 1200px; }
+
+.push_10 {
+  left: 1200px; }
+
+.pull_10 {
+  left: -1200px; }
+
+.container_12 .grid_11 {
+  width: 1300px; }
+
+.prefix_11 {
+  padding-left: 1320px; }
+
+.suffix_11 {
+  padding-right: 1320px; }
+
+.push_11 {
+  left: 1320px; }
+
+.pull_11 {
+  left: -1320px; }
+
+.container_12 .grid_12 {
+  width: 1420px; }
+
+.prefix_12 {
+  padding-left: 1440px; }
+
+.suffix_12 {
+  padding-right: 1440px; }
+
+.push_12 {
+  left: 1440px; }
+
+.pull_12 {
+  left: -1440px; }

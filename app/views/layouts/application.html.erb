@@ -1,14 +1,177 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ConfigMep</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Event App Creator | <%= @titre %></title>
+  <%= csrf_meta_tag %>
+  
+  <%= stylesheet_link_tag ("style"), :media => "all" %>
+  <%= stylesheet_link_tag ("feature-carousel"), :media => "all" %>
+  <%= stylesheet_link_tag    ("application"), :media => "all" %>
+
+
+  
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.min.js" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "js/jquery.featureCarousel.js" %>
+
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+		<div class="container_12 grid_12" id="header">
+			<div class="grid_12" id="row1">
+						<div class="grid_1" id= "logo_magency">						
+							<%= image_tag('header/Layer-7.png', :size => '95x58', :alt => "logo_magency") %>
+						</div>	
+						<div class="grid_7" id="title">
+							<h3>Event App Creator | <%= @titre %></h3>	
+						</div>							
+						<div class="grid_3" id="magency_prod">
+							<span class="prod_name">a magency digital production</span>
+								<span class="shape_icon">
+							<%= image_tag('header/Shape-12.png', :size => '20x15', :alt => "shape_icon")%>
+								</span>
+						</div>
+										
+			</div>
+				<div class="grid_12" id="row2">
+					<div class="grid_6 push_2" id="text_config">
+						<h4><span>Configure the perfect application for your event in 3 minutes and reveive it for free by email!</span></h4>
+					</div>
+				</div>
+		</div>
 
-<%= yield %>
+		<div class="container_12 grid_12" id="slideshow">
+				<div class="grid_9 push_2">						
+					<!-- <a id="but_prev" href="#">PREV</a> | <a id="but_pause" href="#">PAUSE</a> | <a id="but_start" href="#">START</a> | <a id="but_next" href="#">NEXT</a>  -->
+  
+    <div class="carousel-container">
+    
+      <div id="carousel">
+        <div class="carousel-feature">
+          <%= image_tag('sample1.jpg', :alt => "sample1", :class => "carousel-image") %>
+          <div class="carousel-caption">
+            <p>
+              This area is typically used to display captions associated with the images. They are set to hide and fade in on rotation.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-feature">
+          <%= image_tag('sample2.jpg', :alt => "sample2", :class => "carousel-image") %>
+          <div class="carousel-caption">
+            <p>
+              The background will expand up or down to fit the caption.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-feature">
+          <%= image_tag('sample3.jpg', :alt => "sample3", :class => "carousel-image") %>
+          <div class="carousel-caption">
+            <p>
+              Images can be placed here as well.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-feature">
+          <%= image_tag('sample4.jpg', :alt => "sample4", :class => "carousel-image") %>
+        </div>
+        <div class="carousel-feature">
+          <%= image_tag('sample5.jpg', :alt => "sample5", :class => "carousel-image") %>
+          <div class="carousel-caption">
+            <p>
+              The background color of the caption area can be changed using CSS. The opacity can be changed in the options, but it will also change the opacity of the text.
+            </p>
+          </div>
+        </div>
+      </div>
+    
+<!--       <div id="carousel-left"><%= image_tag('arrow-left.png') %></div>
+      <div id="carousel-right"><%= image_tag('arrow-right.png') %></div> -->
+    </div>
+  
+   
+				</div>
+				<div class="grid_3" id="ipad1">
+				<%= image_tag('slideshow/ipad_slideshow.png', :alt => "ipad_1") %>
+				</div>
+		</div>	
+
+		<div class="container_12 grid_12">
+			<div class="grid_2" id="navbar">					
+				<ol id="navigation">
+						<li class="home">
+							<div id="nav_home">
+								<div id="nav_button1">
+									<div id="nav_icon1"></div>
+									<%= link_to("Home", {:action =>'index'}) %>
+								</div>
+							</div>
+						<li class="event">
+							<div id="nav_event">
+								<div id="nav_button2">
+									<div id="nav_icon2"></div>
+									<%= link_to("Event", {:action =>'event'}) %>
+								</div>								
+							</div>	
+						<li class="content">
+							<div id="nav_content">
+								<div id="nav_button3">
+									<div id="nav_icon3"></div>
+								<%= link_to("Content", {:action =>'content'}) %>
+								</div>
+							</div>
+						<li class="logistics">
+							<div id="nav_logistics">
+								<div id="nav_button4">
+									<div id="nav_icon4"></div>
+								<%= link_to("Logistics", {:action =>'logistics'}) %>
+								</div>
+							</div>
+						<li class="app">
+							<div id="nav_app">
+								<div id="nav_button5">
+									<div id="nav_icon5"></div>
+								<%= link_to("App", {:action =>'app'}) %>
+								</div>
+							</div>
+				</ol>				
+			</div>
+			<div class="slide">
+
+			</div>
+			<div class="grid_10" id="main">
+				<%= yield :head %>
+				<% text = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>		
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, http://magencydigital.com quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>" %>
+				<%= highlight(text, 'lorem') %>
+				
+			</div>
+
+			<div class="grid_9 push_2" id="footer">
+				<div class="footer_text">
+					<span><strong>Not sure of what you need ?</strong></span> 
+					<p>Call our sales rep. She will help you design your app! 
+						Call us now at +33 1 23456789 or request a callback.</p>
+				</div>
+			
+				<div class="photo_footer"> </div>
+			</div>
+
+			</div>
+		</div>
+		<div class="container_12 grid_12" id="footer2">
+
+		</div>
+
+				<%= yield %> 							
+
 
 </body>
 </html>

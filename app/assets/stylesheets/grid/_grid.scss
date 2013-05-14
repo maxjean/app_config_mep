@@ -1,0 +1,88 @@
+//*----------------------------------------------*/
+//* Config */
+//*----------------------------------------------*/
+
+@mixin grid_base (
+		  $columns: 12,
+		  $width: 100%,
+		  $gutter:20px,
+		  $prefix: true,
+		  $push: true)  {
+
+  	$column_width: $width / $columns;
+	//*----------------------------------------------*/
+	//* Basic */
+	//*----------------------------------------------*/
+	body {
+  		max-width: $width;
+	}
+
+	.grid {
+	  display: inline;
+	  float: left;
+	  margin-left: $gutter / 2;
+	  margin-right: $gutter / 2;
+	}
+
+	.relative {
+		position: relative;
+	}
+
+	@include generate_grid(
+		  $columns,
+		  $width,
+		  $gutter,
+		  $prefix,
+		  $push);
+}
+//*----------------------------------------------*/
+//* Loops */
+//*----------------------------------------------*/
+
+@mixin generate_grid(
+		  $columns: 12,
+		  $width: 960px,
+		  $gutter: 20px,
+		  $prefix: true,
+		  $push: true
+  	) {
+
+  $column_width: $width / $columns;
+  $container_name: ".container_#{$columns}";
+
+  #{$container_name} {
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: $width;
+  }
+
+		@for $i from 1 through $columns {
+
+			.grid_#{$i} {
+			@extend .grid;
+			#{$container_name} & {
+			width: $i * $column_width - $gutter;
+			}
+			}
+			@if $prefix == true {
+				.prefix_#{$i} {
+					padding-left: $i * $column_width;
+				}
+				.suffix_#{$i} {
+					padding-right: $i * $column_width;
+				}
+			}
+
+		@if $push == true {
+			.push_#{$i} {
+			@extend .relative;
+			left: $i * $column_width;
+			}
+			.pull_#{$i} {
+			@extend .relative;
+			left: -$i * $column_width;
+			}
+		}
+	}
+}
+
