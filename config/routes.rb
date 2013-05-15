@@ -6,6 +6,7 @@ ConfigMep::Application.routes.draw do
   get "basic/layout"
   get "basic/logistics"
   get "basic/app"
+  get "user/index"
 
 
   # The priority is based upon order of creation:

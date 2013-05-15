@@ -1,6 +1,6 @@
 class BasicController < ApplicationController
   def index
-  	@titre = "Welcome" 	
+  	@titre = "Welcome" 
   end 
   
   def event
