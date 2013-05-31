@@ -1,0 +1,13 @@
+<h1>Sign Up</h1>
+
+<%= form_for @event do |f| %>
+	<div class="field">
+		<%= f.label :"What is your e-mail address ?" %><br />
+		<%= f.email_field :email %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Next" %>
+	</div>
+
+<% end %>
+	

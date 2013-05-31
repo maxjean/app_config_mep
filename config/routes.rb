@@ -6,7 +6,27 @@ ConfigMep::Application.routes.draw do
   get "basic/layout"
   get "basic/logistics"
   get "basic/app"
-  get "user/index"
+
+end
+
+
+ConfigMep::Application.routes.draw do
+
+  resources :events
+  resources :event_steps 
+  # do 
+  #    collection do
+  #    get 'test'
+  #  end
+    root to: 'events#index'
+  end
+  # match "/perso2", to => Events
+ # match "/event_steps/:id", :to => "event_steps#perso2"
+#  post "event_steps/perso2"
+  #root to: 'event_steps#index'
+#  match "EventSteps#perso2"
+#  match "/perso2(.:format)" => "event_steps/perso2", :as => :perso2
+# end
 
 
   # The priority is based upon order of creation:
@@ -65,4 +85,3 @@ ConfigMep::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end

@@ -7,7 +7,7 @@
 
 body {
   background-image: url("Background-2.jpg");
-  font-family: open_sansregular, serif;
+  font-family: "open_sansregular", "Arial", "Serif";
   font-weight: normal;
   font-size: 1em;
   margin: 0 0;

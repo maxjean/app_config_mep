@@ -100,35 +100,35 @@
 							<div id="nav_home">
 								<div id="nav_button1">
 									<div id="nav_icon1"></div>
-									<%= link_to("Home", {:action =>'index'}) %>
+									<%= link_to("Home", {:action =>'index', :controller=>'basic'}) %>
 								</div>
 							</div>
 						<li class="event">
 							<div id="nav_event">
 								<div id="nav_button2">
 									<div id="nav_icon2"></div>
-									<%= link_to("Event", {:action =>'event'}) %>
+									<%= link_to("Event", {:action =>'event', :controller=>'basic'}) %>
 								</div>								
 							</div>	
 						<li class="content">
 							<div id="nav_content">
 								<div id="nav_button3">
 									<div id="nav_icon3"></div>
-								<%= link_to("Content", {:action =>'content'}) %>
+								<%= link_to("Content", {:action =>'content', :controller => 'basic'}) %>
 								</div>
 							</div>
 						<li class="logistics">
 							<div id="nav_logistics">
 								<div id="nav_button4">
 									<div id="nav_icon4"></div>
-								<%= link_to("Logistics", {:action =>'logistics'}) %>
+								<%= link_to("Logistics", {:action =>'logistics', :controller=>'basic'}) %>
 								</div>
 							</div>
 						<li class="app">
 							<div id="nav_app">
 								<div id="nav_button5">
 									<div id="nav_icon5"></div>
-								<%= link_to("App", {:action =>'app'}) %>
+								<%= link_to("App", {:action =>'app', :controller=>'basic'}) %>
 								</div>
 							</div>
 				</ol>				
