@@ -5,10 +5,20 @@ class EventStepsController < ApplicationController
 
 	def show
 	 # @event = Event.new(params[:event_id])
-	  #	@event = Event.find_by_id(session[:event_id])
+	  	@event = Event.find_by_id(session[:event_id])
 	    render_wizard
   	end
 
+  def update
+    @event = Event.find_by_id(session[:event_id])
+    @event.attributes = params[:event]
+    render_wizard @event
+  end
+
+  private
+  def redirect_to_finish_wizard
+    redirect_to next_wizard_path, notice: "Thanks for signing up."
+  end
 	# def update
 	#   @event = Event.find_by_id(session[:event_id])
 	#   @event.attributes = params[:event]

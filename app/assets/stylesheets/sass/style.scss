@@ -20,8 +20,29 @@ body {
 }
 
 
-h3 {
+h1 {
+	color: #895692;
+	font-size: 1.5em;
 	text-transform: uppercase;
+}
+
+#text_config h2 {
+	color: #884A95;
+	font-size: 1.1em;
+	text-align: center;
+	text-shadow: 4px 2px 20px white;
+}
+
+h2 {
+	color: #884A95;
+	font-size: 1.1em;
+	text-shadow: 4px 2px 20px white;
+}
+
+
+.prod_name{
+	color: gray;
+	font-size: 0.85em;
 }
 
 .img_header {
@@ -41,15 +62,11 @@ h3 {
 
 #magency_prod{
 	margin-top: 17px;
-	text-transform:capitalize;
 	font-size: 0.8em;
 	width:200px;
 	padding-left: 80px;
 }
 
-.prod_name{
-	
-}
 
 #text_config h4 {
 	text-shadow: 4px 2px 20px white;
@@ -177,7 +194,7 @@ ol {
 
  ol li a {
  display:block;
- width:100px;
+ width:150px;
  text-decoration:none;
  color: gray;
  }
@@ -255,6 +272,12 @@ img{
   margin-top: 14px;
 left:580px;
 z-index:200;
+}
+
+::selection {
+background: #C5ABCE;
+color: #fff;
+text-shadow: 0.1em 0.1em 0.05em #333;
 }
 
 
