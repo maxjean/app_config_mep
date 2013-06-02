@@ -7,12 +7,13 @@
 	</div> -->
 
 	<div class="field">
-		<%= f.label :"I want to rent " %><%= f.number_field :rent_quantity %>
-		<%= f.label :"iPads for " %><%= f.number_field :rent_length %>
+		<%= f.label :"I want to rent " %><%= f.number_field :rent_quantity, :in => 1...10000 %>
+		<%= f.label :"iPad(s) for " %><%= f.number_field :rent_length, :in => 1...100 %> day(s).
 	</div>
 	<br />
 	<div class="field">
-		<%= f.label :"My event is located in " %><%= f.text_field :rent_location %>
+		<%= f.label :"My event is located in " %>
+		<%= f.text_field :rent_location %>
 	</div>
 	<br />
 	<div class="field">
