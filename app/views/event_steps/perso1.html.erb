@@ -7,36 +7,37 @@
 	</div> -->
 
 	<div class="field">
-		<%= f.label :"I want to rent " %><%= f.number_field :rent_quantity, :in => 1...10000 %>
+		<%= f.label :rent_quantity, :"I want to rent " %><%= f.number_field :rent_quantity, :in => 1...10000 %>
 		<%= f.label :"iPad(s) for " %><%= f.number_field :rent_length, :in => 1...100 %> day(s).
 	</div>
 	<br />
 	<div class="field">
-		<%= f.label :"My event is located in " %>
-		<%= f.text_field :rent_location %>
+		<%= f.label :rent_location, :"My event is located in " %>
+<!-- 		<%= f.select(:rent_location, 1..5, {}, {:style => "width: 4em;"}) %> -->
+		<%= f.select(:rent_location, @countries_list) %>
 	</div>
 	<br />
 	<div class="field">
-		<%= f.label :"Do you need WiFi setup ? " %>
+		<%= f.label :wifi_setup, :"Do you need WiFi setup ? " %>
 		<%= f.radio_button :wifi_setup, true %><%= f.label :"yes" %>
 		<%= f.radio_button :wifi_setup, false %><%= f.label :no %><br />
 	</div>
 	<br />
 	<div class="field">
-		<%= f.label :"Do you have any special requirements ? " %><br />
+		<%= f.label :requirements, :"Do you have any special requirements ? " %><br />
 		<%= f.text_area :requirements, :rows => 5, :cols => 50, :placeholder => "If so, write them here" %>
 	</div>
 	<br />
 	<div class="field">
-		<%= f.label :"What is your firstname ? " %><br/><%= f.text_field :firstname %>
+		<%= f.label :firstname, :"What is your firstname ? " %><br/><%= f.text_field :firstname %>
 	</div>
 	<br />
 	<div class="field">
-		<%= f.label :"What is your lastname ? " %><br/><%= f.text_field :lastname %>
+		<%= f.label :lastname, :"What is your lastname ? " %><br/><%= f.text_field :lastname %>
 	</div>
 	<br />
 	<div class="field">
-		<%= f.label :"What is your phone number ? " %><br/><%= f.telephone_field :phone_number, :cols => 30 %>
+		<%= f.label :phone_number, :"What is your phone number ? " %><br/><%= f.telephone_field :phone_number, :cols => 30 %>
 	</div>
 	<br />
 	<div class="actions">
