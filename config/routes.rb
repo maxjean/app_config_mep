@@ -11,7 +11,9 @@ end
 
 
 ConfigMep::Application.routes.draw do
-
+  resources :orders
+  resources :order_steps
+    root to: 'orders#index'
   resources :events
   resources :event_steps 
   # do 
