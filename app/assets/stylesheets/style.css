@@ -176,7 +176,8 @@ ol li a:hover {
 #main {
   background-image: url("steps/back.jpg");
   width: 1120px;
-  height: 390px;
+  height: auto;
+  min-height: 390px;
   margin-right: 20px;
   margin-left: 0;
   padding-left: 30px;

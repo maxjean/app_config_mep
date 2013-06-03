@@ -6,7 +6,7 @@ class EventStepsController < ApplicationController
 	def show
 	 # @event = Event.new(params[:event_id])
 	  	@event = Event.find_by_id(session[:event_id])
-      @countries_list = Country.all.collect {|s| [ s.name]}
+      @countries_array = Country.all.collect {|c| [ c.name, c.id ]}
 	    render_wizard
   	end
 

@@ -1,3 +1,5 @@
+<%= content_for :head do %>
+
 <h2>Your event organization details</h2>
 
 <%= form_for @event, url: wizard_path do |f| %>
@@ -5,16 +7,17 @@
 		<%= f.label :"What is your e-mail address ?" %><br />
 		<%= f.email_field :email %>
 	</div> -->
-
+<fieldset>
+	<legend> Your event </legend>
 	<div class="field">
-		<%= f.label :rent_quantity, :"I want to rent " %><%= f.number_field :rent_quantity, :in => 1...10000 %>
-		<%= f.label :"iPad(s) for " %><%= f.number_field :rent_length, :in => 1...100 %> day(s).
+		<%= f.label :rent_quantity, :"I want to rent " %><%= f.number_field :rent_quantity, :in => 1...10000, :autofocus => true%>
+		<%= f.label :iPad, :"iPad(s) for " %><%= f.number_field :rent_length, :in => 1...100 %> day(s).
 	</div>
 	<br />
 	<div class="field">
 		<%= f.label :rent_location, :"My event is located in " %>
 <!-- 		<%= f.select(:rent_location, 1..5, {}, {:style => "width: 4em;"}) %> -->
-		<%= f.select(:rent_location, @countries_list) %>
+		<%= f.select(:rent_location, @countries_array, {:include_blank => true}) %>
 	</div>
 	<br />
 	<div class="field">
@@ -28,6 +31,10 @@
 		<%= f.text_area :requirements, :rows => 5, :cols => 50, :placeholder => "If so, write them here" %>
 	</div>
 	<br />
+</fieldset>
+	<br />
+<fieldset>
+	<legend> Personal informations </legend>
 	<div class="field">
 		<%= f.label :firstname, :"What is your firstname ? " %><br/><%= f.text_field :firstname %>
 	</div>
@@ -40,8 +47,13 @@
 		<%= f.label :phone_number, :"What is your phone number ? " %><br/><%= f.telephone_field :phone_number, :cols => 30 %>
 	</div>
 	<br />
+
+</fieldset>
+	<br />
+
 	<div class="actions">
 		<%= f.submit "Next" %>
 	</div>
-
+	<br />
+<% end %>
 <% end %>
