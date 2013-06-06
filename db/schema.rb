@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602175437) do
+ActiveRecord::Schema.define(:version => 20130605084950) do
 
   create_table "addresses", :force => true do |t|
     t.integer "adress_id"
@@ -112,6 +112,9 @@ ActiveRecord::Schema.define(:version => 20130602175437) do
     t.integer "slideshow_id"
     t.string  "title",        :limit => 50
     t.text    "description"
+    t.string  "content_type"
+    t.binary  "binary_data"
+    t.string  "path"
   end
 
   create_table "polices", :force => true do |t|

@@ -18,7 +18,7 @@ class OrderStepsController < ApplicationController
 
   private
   def redirect_to_finish_wizard
-    redirect_to next_wizard_path, notice: "Thanks for signing up."
+    redirect_to redirect_to order_steps_path, notice: "Thanks for signing up."
   end
 
 end

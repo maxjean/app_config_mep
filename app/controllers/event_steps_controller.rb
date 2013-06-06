@@ -3,6 +3,10 @@ class EventStepsController < ApplicationController
 	steps :perso1, :perso2
 #...
 
+  def new
+    @event = Event.new
+  end
+
 	def show
 	 # @event = Event.new(params[:event_id])
 	  	@event = Event.find_by_id(session[:event_id])
