@@ -3,9 +3,9 @@ class EventStepsController < ApplicationController
 	steps :perso1, :perso2
 #...
 
-  def new
-    @event = Event.new
-  end
+  # def new
+  #   @event = Event.new
+  #  end
 
 	def show
 	 # @event = Event.new(params[:event_id])

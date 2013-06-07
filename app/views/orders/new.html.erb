@@ -1,15 +1,10 @@
 <%= content_for :head do %>
 <h3>What are your needs ?</h3>
 <span class>We can advice a pre-configured package of applications based on your need. <br />Choose up to three packages on the list:</span>
+<h5>2 optional remaining choices :</h5>
 
 
-	<div class="field">
-	<h3><%= @picture.name %></h3>
-<img src="<%= url_for(:action => 'file', :id => @picture.id) %>"/>
-	</div>
-	<br />
-	<div class="actions">
-		<%= f.submit "Next" %>
-	</div>
+
+
 
 <% end %>
