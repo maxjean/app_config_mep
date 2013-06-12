@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605084950) do
+ActiveRecord::Schema.define(:version => 20130612095958) do
 
   create_table "addresses", :force => true do |t|
     t.integer "adress_id"
@@ -107,6 +107,13 @@ ActiveRecord::Schema.define(:version => 20130605084950) do
 
   add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
   add_index "pages", ["subject_id"], :name => "index_pages_on_subject_id"
+
+  create_table "paintings", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "pictures", :force => true do |t|
     t.integer "slideshow_id"
