@@ -21,6 +21,11 @@ ConfigMep::Application.routes.draw do
   #    get 'test'
   #  end
     root to: 'events#index'
+
+    root :to => "galleries#index"
+
+  resources :galleries
+  resources :paintings
   end
   # match "/perso2", to => Events
  # match "/event_steps/:id", :to => "event_steps#perso2"
