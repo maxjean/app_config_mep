@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612101259) do
+ActiveRecord::Schema.define(:version => 20130612102805) do
 
   create_table "addresses", :force => true do |t|
     t.integer "adress_id"
@@ -75,6 +75,12 @@ ActiveRecord::Schema.define(:version => 20130612101259) do
     t.integer  "country_id"
   end
 
+  create_table "galleries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "menu_links", :force => true do |t|
     t.integer "menu_id"
     t.string  "title",   :limit => 50
@@ -114,6 +120,7 @@ ActiveRecord::Schema.define(:version => 20130612101259) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "image"
+    t.integer  "gallery_id"
   end
 
   create_table "pictures", :force => true do |t|
