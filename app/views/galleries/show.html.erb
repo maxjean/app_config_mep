@@ -4,6 +4,7 @@
     <div class="painting">
       <%= image_tag painting.image_url.to_s if painting.image? %>
       <div class="name"><%= painting.name %></div>
+      <div class="description"><%= painting.description %></div>
       <div class="actions">
         <%= link_to "edit", edit_painting_path(painting) %> |
         <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
