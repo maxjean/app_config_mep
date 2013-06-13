@@ -1,21 +1,31 @@
-
-<div id="paintings">
+<%= content_for :head do %>
   <% for painting in @gallery.paintings %>
-    <div class="painting">
-      <%= image_tag painting.image_url.to_s if painting.image? %>
-      <div class="name"><%= painting.name %></div>
+  <div class="grid_9" id="row">
+    <div class="grid_7" id="paintings">
+      <div class="name"><h4><%= painting.name %></h4></div>
       <div class="description"><%= painting.description %></div>
       <div class="actions">
         <%= link_to "edit", edit_painting_path(painting) %> |
         <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
       </div>
     </div>
-  <% end %>
-  <div class="clear"></div>
-</div>
 
-<p>
+    <div class="#" id="painting">
+      <%= image_tag painting.image_url.to_s if painting.image? %>
+    </div>
+  </div>
+  <% end %>
+<div class="grid_4" id="links_galleries">
+  <p>
   <%= link_to "Add a Painting", new_painting_path(:gallery_id => @gallery) %> |
   <%= link_to "Remove Gallery", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View Galleries", galleries_path %>
 </p>
+</div>
+  <div class="clear"></div>
+</div>
+
+
+
+<% end %>
+ <%= params.inspect%>

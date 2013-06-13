@@ -1,4 +1,4 @@
-
+<%= content_for :head do %>
 <% for gallery in @galleries %>
   <div class="gallery">
     <h2><%= link_to gallery.name, gallery %></h2>
@@ -7,3 +7,4 @@
 <% end %>
 
 <p><%= link_to "New Gallery", new_gallery_path %></p>
+<% end %>

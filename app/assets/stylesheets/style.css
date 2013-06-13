@@ -96,7 +96,7 @@ h2 {
   text-indent: 10px; }
 
 nav a:hover {
-  color: #760001;
+  color: #884A95;
   border-bottom: 3px solid #760001; }
 
 #navigation {
@@ -230,3 +230,44 @@ ol li a:hover {
   background: #C5ABCE;
   color: #fff;
   text-shadow: 0.1em 0.1em 0.05em #333; }
+
+#gallery h2 {
+  margin-bottom: 2px; }
+
+#painting {
+  border: solid 1px #CCC;
+  padding: 10px 10px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px; }
+
+#painting .name {
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold; }
+
+#paintings .description {
+  padding-top: 5px;
+  text-align: left;
+  color: gray; }
+
+#paintings .image_placeholder {
+  width: 200px;
+  height: 150px;
+  background-color: #B6B6B6; }
+
+#paintings .actions {
+  font-size: 10px;
+  text-align: center;
+  color: #777; }
+
+#row {
+  border: solid 0.1em #CCC;
+  padding: 10px 10px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px; }
+
+h4 {
+  color: #884A95;
+  font-size: 1.0em; }
