@@ -4,7 +4,13 @@ class GalleriesController < ApplicationController
   end
 
   def show
+  
     @gallery = Gallery.find(params[:id])
+    @painting = Painting.where("gallery_id = ?", params[:id])
+    respond_to do |format|
+    	format.html
+    	format.json { render json: @painting.as_json(only: [:id, :name])}
+    end
   end
 
   def new

@@ -286,12 +286,27 @@ text-shadow: 0.1em 0.1em 0.05em #333;
   margin-bottom: 2px;
 }
 
+.indication-text {
+	color: #666;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+#paintings{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 #painting {
   border: solid 1px #CCC;
+  border-radius: 5px;
   padding: 10px 10px;
   float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 #painting .name {
@@ -320,13 +335,25 @@ text-shadow: 0.1em 0.1em 0.05em #333;
 
 #row {
   border: solid 0.1em #CCC;
-  padding: 10px 10px;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
   float: left;
+  margin-top: 10px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+h3 {
+	color: #884A95;
+	
+	}
 
 h4 {
 	color: #884A95;
 	font-size: 1.0em;
+	}
+
+h5 {
+	color: gray;
+	font-size: 0.8em;
 	}
