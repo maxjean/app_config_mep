@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612102805) do
+ActiveRecord::Schema.define(:version => 20130624090853) do
 
   create_table "addresses", :force => true do |t|
     t.integer "adress_id"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(:version => 20130612102805) do
     t.text    "description"
   end
 
+  create_table "categories_components", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "component_id"
+  end
+
+  add_index "categories_components", ["category_id", "component_id"], :name => "index_categories_components_on_category_id_and_component_id"
+
   create_table "cities", :force => true do |t|
     t.integer "city_id"
     t.integer "country_id"
@@ -47,11 +54,15 @@ ActiveRecord::Schema.define(:version => 20130612102805) do
   end
 
   create_table "components", :force => true do |t|
-    t.integer "category_id"
-    t.string  "name",        :limit => 30
-    t.text    "description"
-    t.text    "picture"
-    t.float   "price"
+    t.integer  "category_id"
+    t.string   "name",        :limit => 30
+    t.text     "description"
+    t.text     "picture"
+    t.float    "price"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "gallery_id"
   end
 
   create_table "countries", :force => true do |t|
@@ -161,6 +172,10 @@ ActiveRecord::Schema.define(:version => 20130612102805) do
     t.boolean  "visible",    :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "test1", :id => false, :force => true do |t|
+    t.integer "column1"
   end
 
 end

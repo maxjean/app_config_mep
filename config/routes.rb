@@ -26,6 +26,7 @@ ConfigMep::Application.routes.draw do
 
   resources :galleries
   resources :paintings
+  resources :components
   end
   # match "/perso2", to => Events
  # match "/event_steps/:id", :to => "event_steps#perso2"
